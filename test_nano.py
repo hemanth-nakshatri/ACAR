@@ -23,8 +23,6 @@ def preProcess(img):
     img = img / 255
     return img
 
-model = load_model('models/model_phase_1.2.h5')
-
 def run(img_path):
     image = Image.open(img_path)
     image = np.asarray(image)
@@ -35,7 +33,13 @@ def run(img_path):
     return steering
 
 
+model = load_model('models/model_phase_1.2.h5')
+print("Model Loaded")
+
+
+
 
 for i in range(1,8):
+    print(i)
     img_path = 'test{}.jpg'.format(i)
     run(img_path)
