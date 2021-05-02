@@ -45,6 +45,6 @@ print("Model Loaded")
 start = time.process_time()
 for i in range(1,91):
     print(i)
-    img_path = 'test({}).jpg'.format(i)
+    img_path = 'test_images/test({}).jpg'.format(i)
     run(img_path)
 print("Time taken is {}".format(time.process_time() - start))
