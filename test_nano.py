@@ -2,16 +2,19 @@ print('Setting UP')
 import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 import numpy as np
+print("np imported")
+
 import cv2
+
+print("cv2 imported")
+
 from tensorflow.keras.models import load_model
+print("tf imported")
 
 from PIL import Image
-
-
-
-
-
+print("PIL imported")
 
 def preProcess(img):
     img = img[60:135, :, :]
@@ -32,7 +35,7 @@ def run(img_path):
     print(steering)
     return steering
 
-
+print("Loading a model")
 model = load_model('models/model_phase_1.2.h5')
 print("Model Loaded")
 
