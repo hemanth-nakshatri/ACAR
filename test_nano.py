@@ -23,7 +23,7 @@ def preProcess(img):
     img = img / 255
     return img
 
-model = load_model('Car_Simulation\models\model_phase_1.2.h5')
+model = load_model('models\model_phase_1.2.h5')
 
 def run(img_path):
     image = Image.open(img_path)
@@ -37,5 +37,5 @@ def run(img_path):
 
 
 for i in range(1,8):
-    img_path = 'Car_Simulation\\test{}.jpg'.format(i)
+    img_path = 'test{}.jpg'.format(i)
     run(img_path)
