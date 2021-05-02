@@ -1,5 +1,6 @@
 print('Setting UP')
 import os
+import time
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
@@ -41,8 +42,9 @@ print("Model Loaded")
 
 
 
-
+start = time.process_time()
 for i in range(1,8):
     print(i)
     img_path = 'test{}.jpg'.format(i)
     run(img_path)
+print("Time taken is {}".format(time.process_time() - start))
