@@ -3,10 +3,9 @@ import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import numpy as np
-from flask import Flask
+
 from tensorflow.keras.models import load_model
-import base64
-from io import BytesIO
+
 from PIL import Image
 import cv2
 
