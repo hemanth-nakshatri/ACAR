@@ -23,7 +23,7 @@ def preProcess(img):
     img = img / 255
     return img
 
-model = load_model('models\model_phase_1.2.h5')
+model = load_model('models/model_phase_1.2.h5')
 
 def run(img_path):
     image = Image.open(img_path)
