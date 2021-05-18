@@ -37,7 +37,11 @@ def run(img_path):
     return steering
 
 print("Loading a model")
-model = load_model('models/model_phase_1.2.h5')
+# model = load_model('models/model_phase_1.2.h5')
+with open('model_json.json') as json_file:
+    json_config = json_file.read()
+model = tf.keras.models.model_from_json(json_config)
+model.load_weights("model_downloaded.hdf5")
 print("Model Loaded")
 
 
